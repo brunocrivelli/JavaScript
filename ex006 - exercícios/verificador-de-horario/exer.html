@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>verificador de horário</title>
+    <style>
+        body{
+            background-color: rgb(81, 161, 252);
+            font: normal 2em arial;
+        }
+        header{
+            margin: auto;
+            text-align: center;
+            
+        }
+        section{
+         background-color: white;
+         height: 350px;
+         width: 350px;
+         margin: auto;
+         border: 1px solid black;
+         border-radius: 10px;
+         box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.26);
+        }
+        div{
+            text-align: center;
+            padding: 10px;
+        }
+        #img{
+            height: 275px;
+            width: 275px;
+        }
+        footer{
+            margin: auto;
+            text-align: center;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body onload="carregar()">
+    <header>
+       <h1>
+        hora do dia
+       </h1>
+    </header>
+
+    <section>
+        <div id="msg">
+            aqui vai aparecer a mensagem...
+        </div>
+        <div id="img1">
+            <img src="manha.png" alt="foto do dia" id="img">
+        </div>
+    </section>
+    
+    <footer>
+        <p>&copy; curso em vídeo</p>
+    </footer>
+    <script>
+
+        function carregar(){
+        var msg = document.getElementById("msg")
+        var img = document.querySelector("img#img")
+        var data = new Date()
+        var hora = data.getHours()
+        msg.innerHTML = `agora são ${hora} horas.`
+        if (hora >= 0 && hora <= 12) {
+            img.src = 'manha.png' //com esse SRC eu consegui puxar as imagens
+            document.body.style.background = "#e2cd9f"
+        } else if (hora >= 12 && hora <= 18) {
+          img.src = 'tarde.png'
+          document.body.style.background = "#b9846f"
+        } else{
+            img.src = 'noite.png'
+            document.body.style.background = "#515154"
+        }
+
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+@charset "UTF-8" ;
+
+
+
+body{
+    background-color: rgb(81, 161, 252);
+    font: normal 1.5em arial;
+    text-align: center;
+}
+header{
+    color: #fff;
+}
+section{
+    background-color: #fff;
+    margin: auto;
+    height: 400px;
+    width: 400px;
+    font-size: 16px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.301);
+}
+#foto{
+    height: 250px;
+    width: 250px;
+}
+footer{
+    font: normal 16px arial;
+}

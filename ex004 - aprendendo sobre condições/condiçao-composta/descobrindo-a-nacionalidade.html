@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>descobrindo a nacionalidade</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+  <h1>vamos descobrir se você é brasileiro ou estrangeiro</h1> 
+  clique aqui para começar
+  <input type="button" value="começar" onclick="clicar()">
+  
+  <div id="res">resultado:</div>
+    <script>
+        function clicar(){
+            let pais = prompt("qual o nome do seu pais?")
+            let res = document.getElementById('res')
+                if (pais != "brasil"){
+                res.innerHTML += "<p>você é estrangeiro!"
+            }
+            else{
+                res.innerHTML += "<p>você é brasileiro!"
+            }        
+            }
+    </script>
+</body>
+</html>
